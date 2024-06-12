@@ -1,12 +1,25 @@
-:root {
-  --primary-gold: #FCD74B; 
-  --mono-white: #ffffff; 
-  --mono-black: #000000; 
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./styles/_variables.scss";
+@import "./styles/_globals.scss";
+@import "./styles/_animations.scss";
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -17,22 +30,4 @@ body {
 
   margin: 0;
   padding: 0;
-
-
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#root {
-  position: relative;
-  
-  margin: auto;
-  max-width: 700px;
-  height: 100vh;
-  min-height: 100dvh;
-  border: 1px solid rgba(255, 0, 0, 0.427);
-  box-sizing: border-box;
 }

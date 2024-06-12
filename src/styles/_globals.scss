@@ -1,0 +1,27 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#app {
+    position: relative;
+    
+    margin: auto;
+    max-width: 700px;
+    height: 100vh;
+    min-height: 100dvh;
+    border: 1px solid rgba(255, 0, 0, 0.427);
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+a,
+a:active,
+a:hover {
+    text-decoration: none;
+    color: $white;
+}

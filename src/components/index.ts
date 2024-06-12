@@ -1,1 +1,1 @@
-export { default as MenuBar } from './menu-bar'
+export { default as MenuBar } from './layout/menu-bar'
