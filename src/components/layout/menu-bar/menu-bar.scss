@@ -5,15 +5,44 @@
   bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  background: url(../../../../public/images/bar-bg.png) center center no-repeat;
-  background-size: 100% 100%;
 
-  padding-top: 35px;
-  padding-bottom: 35px;
+  &-bg {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   &-item {
-    width: 20%;
     display: flex;
+    flex-direction: column;
+
     justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 20%;
+
+    padding-top: 2%;
+
+    svg {
+      height: 45%;
+      width: auto;
+    }
+  }
+
+  &-name {
+    margin-top: 5px;
   }
 }
