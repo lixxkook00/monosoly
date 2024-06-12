@@ -1,0 +1,1 @@
+export { default as IcFriends } from './ic-friends'
