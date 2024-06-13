@@ -1,0 +1,115 @@
+.scene {
+  position: relative;
+  margin-top: 30%;
+
+  &-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .slot {
+      position: absolute;
+      height: 3.5%;
+      width: 4%;
+      background-color: red;
+      border-radius: 50%;
+
+      &-1 {
+        left: 49%;
+        top: 57%;
+      }
+      &-2 {
+        left: 42%;
+        top: 53%;
+      }
+      &-3 {
+        left: 36%;
+        top: 50%;
+      }
+      &-4 {
+        left: 28%;
+        top: 47%;
+      }
+      &-5 {
+        left: 22%;
+        top: 44%;
+      }
+      &-6 {
+        left: 15%;
+        top: 41%;
+      }
+      &-7 {
+        left: 7%;
+        top: 38%;
+      }
+      &-8 {
+        left: 15%;
+        top: 34%;
+      }
+      &-9 {
+        left: 21%;
+        top: 31%;
+      }
+      &-10 {
+        left: 28%;
+        top: 28%;
+      }
+      &-11 {
+        left: 35%;
+        top: 25%;
+      }
+      &-12 {
+        left: 42%;
+        top: 22%;
+      }
+      &-13 {
+        left: 49%;
+        top: 18%;
+      }
+      &-14 {
+        left: 56%;
+        top: 21%;
+      }
+      &-15 {
+        left: 63%;
+        top: 25%;
+      }
+      &-16 {
+        left: 70%;
+        top: 28%;
+      }
+      &-17 {
+        left: 77%;
+        top: 31%;
+      }
+      &-18 {
+        left: 84%;
+        top: 34%;
+      }
+      &-19 {
+        left: 92%;
+        top: 38%;
+      }
+      &-20 {
+        left: 84%;
+        top: 41%;
+      }
+      &-21 {
+        left: 77%;
+        top: 44%;
+      }
+      &-22 {
+        left: 70%;
+        top: 47%;
+      }
+      &-23 {
+        left: 63%;
+        top: 50%;
+      }
+      &-24 {
+        left: 56%;
+        top: 53%;
+      }
+    }
+  }
+}

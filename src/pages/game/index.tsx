@@ -1,5 +1,9 @@
+import { GamePlay } from "./components";
+
 const Game = () => {
-  return <div className="game">cc</div>
+  return <>
+    <GamePlay />
+  </>
 }
 
 export default Game;
