@@ -1,0 +1,22 @@
+.character {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-25%, -82%);
+
+  width: 12%;
+
+  transition: all 0.5s ease-in-out;
+
+  &-avt {
+    width: 100%;
+  }
+
+  &-arrow {
+    width: 50%;
+  }
+}
