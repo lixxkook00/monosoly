@@ -1,22 +1,19 @@
-import { SLOTS } from '../../../constants';
-import '../styles/character.scss'
+import { forwardRef } from 'react';
+import '../styles/character.scss';
 
-const Character = () => {
+interface CharacterProps {
+  x: string;
+  y: string;
+}
 
-  const currentSlot = 16;
-  const getPosition = () => {
-    return {
-      x : SLOTS[currentSlot].x - 1 + '%',
-      y : SLOTS[currentSlot].y - 1 + '%',
-    }
-  }
+const Character = forwardRef<HTMLDivElement, CharacterProps>(({ x, y }, ref) => {
 
   return (
-    <div className="character" style={{ left: getPosition().x, top: getPosition().y }}>
-      <img src="/images/ic-x.png" alt="" className="character-avt"/>
-      <img src="/images/pointer.png" alt="" className="character-arrow" />
+    <div ref={ref} className="character" style={{ left: x, top: y }}>
+      <img src="/images/ic-x.png" alt="character avatar" className="character-avt" style={{ cursor: 'pointer' }} />
+      <img src="/images/pointer.png" alt="pointer icon" className="character-arrow" />
     </div>
-  )
-}
+  );
+});
 
 export default Character;

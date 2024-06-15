@@ -6,14 +6,17 @@
   align-items: center;
   justify-content: center;
 
-  transform: translate(-25%, -82%);
+  transform: translate(-33%, -90%);
 
   width: 12%;
 
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s linear;
 
   &-avt {
     width: 100%;
+    border: 3px solid red;
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   &-arrow {

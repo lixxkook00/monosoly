@@ -9,3 +9,15 @@ export interface ISlot {
   y: number;
 }
 
+export interface Slot {
+  x: number;
+  y: number;
+}
+
+export interface CharacterRef {
+  current: HTMLDivElement | null;
+}
+
+export type SetStateType<T> = React.Dispatch<React.SetStateAction<T>>;
+
+
