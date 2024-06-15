@@ -25,7 +25,7 @@ const MissedCard = () => {
   ];
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-3">
+    <div className="grid grid-cols-2 gap-2 w-full">
       {cards.map(({ id, img, title, subtitle, amount, energy, total, level }) => (
         <Card
           key={id}

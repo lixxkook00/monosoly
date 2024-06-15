@@ -6,22 +6,24 @@ interface ProfileBarProps {
 
 const ProfileBar = ({ img, name, balance }: ProfileBarProps) => {
   return (
-    <div className="flex items-center gap-5">
-      <div className="bg-white p-10 rounded-2xl">
-        <img src={`/images/${img}`} alt="" />
+    <div className="flex items-center justify-between">
+      <div className="flex items-center">
+        <div className="bg-black p-6 rounded-2xl">
+          <img src={`/images/${img}`} alt="" />
+        </div>
+
+        <p className="text-base ml-2">{name}</p>
       </div>
 
-      <div className="w-full">
-        <p className="text-xl">{name}</p>
-      </div>
+      <div className="flex items-center">
+        <div className="bg-[#282A2F] rounded-full p-2 py-1.5 mr-2 gap-2 flex items-center cursor-pointer">
+          <p className="text-sm">{balance}</p>
+          <img className="w-5" src="/images/gold-coin.png" alt="" />
+        </div>
 
-      <div className="bg-[#282A2F] rounded-full pl-4 pr-9 py-2 gap-2 flex items-center cursor-pointer">
-        <p className="text-base">{balance}</p>
-        <img src="/images/gold-coin.png" alt="" />
-      </div>
-
-      <div className="bg-[#282A2F] rounded-full px-5 py-2 cursor-pointer">
-        <p className="text-xl">...</p>
+        <div className="bg-[#282A2F] rounded-full flex justify-center items-center py-1.5 px-3 h-full cursor-pointer" style={{ height: '32.8px' }}>
+          <img className="w-6" src="/images/ic-setting.png" alt="" />
+        </div>
       </div>
     </div>
   );

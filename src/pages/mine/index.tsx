@@ -27,23 +27,22 @@ const Mine = () => {
         <img className="w-full" src="/images/map-full.png" alt="map" />
       </div>
 
-      <div className="absolute w-full h-full backdrop-blur-3xl px-5 pt-5 pb-[32%] overflow-y-scroll">
+      <div className="absolute w-full h-full backdrop-blur-3xl px-5 pt-5 pb-[30%] overflow-y-scroll">
         <section className="w-full flex flex-col gap-2">
           <ProfileBar img="" name={username} balance={'12,43k'} />
         </section>
 
-        <section className="flex flex-col items-center p-5 gap-3">
+        <section className="flex flex-col items-center p-4 gap-1">
           <img src="/images/token.png" alt="token" />
-          <p className="text-center text-5xl">{format(heading)}</p>
+          <p className="text-center text-4xl">{format(heading)}</p>
         </section>
 
         <section className="w-full flex flex-col gap-6 items-center">
           <div
-            className="flex items-center justify-center bg-[#282A2F] p-1 gap-2 rounded-xl"
-            style={{ width: 'max-content' }}>
+            className="flex items-center justify-center bg-[#282A2F] p-1 gap-1 rounded-xl w-full">
             {buttonSettings.map(({ label }, index) => (
               <button
-                className="p-4 rounded-xl text-xl"
+                className="w-1/3 p-1 py-2 rounded-xl text-base font-semibold"
                 style={{ background: activeIndex === index ? '#232323' : 'none' }}
                 key={label}
                 onClick={() => setActiveIndex(index)}>
