@@ -55,7 +55,7 @@ const GamePlay = () => {
           <img className='w-full' src="/images/map-full.png" alt="" />
         </div>
 
-        <Dice />
+        <Dice moveTo={moveTo} />
 
         <Character ref={characterRef} x={getPosition(currentSlot).x} y={getPosition(currentSlot).y} />
     </div>

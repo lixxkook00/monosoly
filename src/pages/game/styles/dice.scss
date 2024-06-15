@@ -1,6 +1,173 @@
 .dice {
   position: absolute;
-  width: 10%;
-  left: 47%;
-  top: 23%;
+  width: 20%;
+  left: 52%;
+  top: 24%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(-50%);
+
+  animation: 1s infinite alternate forwards dice-ani;
+  
+  #dice {
+    width: 80px;
+    height: 80px;
+    /* Position the children of #dice in the 3D space: */
+    transform-style: preserve-3d;
+    transition: transform 1.5s ease;
+  }
+
+  .sides {
+    background-color: #FDDF89;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .dot {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background: #414E52;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Cube's default mode in space: */
+  #dice[data-side="1"] {
+    // transform: rotateX(410deg) rotateY(358deg) rotateZ(680deg);
+    animation:  1s forwards rotate-1;
+  }
+  #dice[data-side="2"] {
+    // transform: rotateX(410deg) rotateY(540deg) rotateZ(770deg);
+    animation:  1s forwards rotate-2;
+  }
+  #dice[data-side="3"] {
+    // transform: rotateX(320deg) rotateY(670deg) rotateZ(630deg);
+    animation:  1s forwards rotate-3;
+  }
+  #dice[data-side="4"] {
+    // transform: rotateX(490deg) rotateY(410deg) rotateZ(630deg);
+    animation:  1s forwards rotate-4;
+  }
+  #dice[data-side="5"] {
+    // transform: rotateX(320deg) rotateY(410deg) rotateZ(360deg);
+    animation:  1s forwards rotate-5;
+  }
+  #dice[data-side="6"] {
+    // transform: rotateX(500deg) rotateY(400deg) rotateZ(364deg);
+    animation:  1s forwards rotate-6;
+  }
+
+  /* What happens when the reRoll class is added after the dice is clicked: */
+  #dice[data-side="1"].roll {
+    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  }
+  #dice[data-side="2"].roll {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  #dice[data-side="3"].roll {
+    transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  }
+  #dice[data-side="4"].roll {
+    transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+  }
+  #dice[data-side="5"].roll {
+    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  }
+  #dice[data-side="6"].roll {
+    transform: rotateX(270deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+    /* Dot 1 from slide 1: */
+    .side-1 .dot-1 {
+      top: 50%;
+      left: 50%;
+    }
+    /* Dot 1 from slide 2: */
+    .side-2 .dot-1 {
+      top: 25%;
+      left: 25%;
+    }
+    /*...and so on: */
+    .side-2 .dot-2 {
+      top: 75%;
+      left: 75%;
+    }
+    .side-3 .dot-1 {
+      top: 25%;
+      left: 25%;
+    }
+    .side-3 .dot-2 {
+      top: 75%;
+      left: 75%;
+    }
+    .side-3 .dot-3 {
+      top: 50%;
+      left: 50%;
+    }
+    .side-4 .dot-1 {
+      top: 25%;
+      left: 25%;
+    }
+    .side-4 .dot-2 {
+      top: 25%;
+      left: 75%;
+    }
+    .side-4 .dot-3 {
+      top: 75%;
+      left: 25%;
+    }
+    .side-4 .dot-4 {
+      top: 75%;
+      left: 75%;
+    }
+    .side-5 .dot-1 {
+      top: 25%;
+      left: 25%;
+    }
+    .side-5 .dot-2 {
+      top: 25%;
+      left: 75%;
+    }
+    .side-5 .dot-3 {
+      top: 75%;
+      left: 25%;
+    }
+    .side-5 .dot-4 {
+      top: 75%;
+      left: 75%;
+    }
+    .side-5 .dot-5 {
+      top: 50%;
+      left: 50%;
+    }
+    .side-6 .dot-1 {
+      top: 25%;
+      left: 25%;
+    }
+    .side-6 .dot-2 {
+      top: 25%;
+      left: 75%;
+    }
+    .side-6 .dot-3 {
+      top: 75%;
+      left: 25%;
+    }
+    .side-6 .dot-4 {
+      top: 75%;
+      left: 75%;
+    }
+    .side-6 .dot-5 {
+      top: 50%;
+      left: 25%;
+    }
+    .side-6 .dot-6 {
+      top: 50%;
+      left: 75%;
+    }
 }
