@@ -12,6 +12,8 @@
     overflow: hidden;
     border: 1px solid rgba(255, 0, 0, 0.427);
     box-sizing: border-box;
+
+    background: linear-gradient(180deg, rgba(242,244,255,1) 0%, rgba(152,169,254,1) 100%);
 }
 
 ul {
@@ -57,4 +59,9 @@ a:hover {
     display: inline-flex;
 
     position: absolute;
+}
+
+.mono-container {
+    padding-left: 10px;
+    padding-right: 10px;
 }
