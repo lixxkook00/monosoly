@@ -1,4 +1,4 @@
-import { Icon } from "./type";
+import { Icon } from './type';
 
 const IcCheck: React.FC<Icon> = ({ color = '#ffffff' }) => {
   return <>
