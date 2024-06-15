@@ -2,7 +2,7 @@
   position: absolute;
   width: 20%;
   left: 52%;
-  top: 24%;
+  top: 23%;
 
   display: flex;
   align-items: center;
@@ -11,6 +11,8 @@
   transform: translateX(-50%);
 
   animation: 1s infinite alternate forwards dice-ani;
+
+  user-select: none;
   
   #dice {
     width: 80px;
@@ -21,10 +23,12 @@
   }
 
   .sides {
-    background-color: #FDDF89;
+    background-color: #f8d77b;
     position: absolute;
     width: 100%;
     height: 100%;
+    border: 1px solid #FDE9AA;
+    border-radius: 4px;
   }
 
   .dot {
