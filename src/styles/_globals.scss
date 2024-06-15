@@ -4,7 +4,6 @@
 
 #app {
     position: relative;
-    
     margin: auto;
     max-width: 460px;
     height: 100vh;
@@ -27,6 +26,14 @@ a:active,
 a:hover {
     text-decoration: none;
     color: $white;
+}
+
+a:-webkit-any-link:focus-visible {
+    outline-offset: 0px;
+}
+
+:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
 }
 
 .primary-gold {
@@ -64,4 +71,8 @@ a:hover {
 .mono-container {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.backdrop-blur-3xl {
+    background-color: #00000075;
 }

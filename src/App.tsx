@@ -6,10 +6,12 @@ function App() {
   return (
     <div id="app">
       <Router>
-        <AppRoutes />
-      </Router>
 
-      <MenuBar />
+        <AppRoutes />
+        
+        <MenuBar />
+        
+      </Router>
     </div>
   );
 }

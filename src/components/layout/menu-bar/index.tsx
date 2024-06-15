@@ -1,7 +1,14 @@
-import { IcFriends, IcMine, IcEarn } from '../../../icons'
-import './menu-bar.scss'
+import React from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { IcFriends, IcMine, IcEarn } from '../../../icons';
+import './menu-bar.scss';
 
 const Menubar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const isActive = (path: string) => location.pathname === path;
+
   return (
     <div className="menu-bar">
       <div className="menu-bar-bg">
@@ -10,36 +17,36 @@ const Menubar = () => {
       </div>
       
       <div className="menu-bar-content">
-        <div className="menu-bar-item">
+        <NavLink to="/friends" className={`menu-bar-item ${isActive('/friends') ? 'active' : ''}`}>
           <IcFriends />
           <div className="menu-bar-name text-1">
             Friends
           </div>
-        </div>
-        <div className="menu-bar-item">
+        </NavLink>
+        <NavLink to="/mine" className={`menu-bar-item ${isActive('/mine') ? 'active' : ''}`}>
           <IcMine />
           <div className="menu-bar-name text-1">
             Mine
           </div>
-        </div>
-        <div className="menu-bar-item main">
+        </NavLink>
+        <div className="menu-bar-item main" onClick={() => navigate('/game')}>
           <div className="menu-bar-name primary-gold text-5">
             5/6
           </div>
           <img src="/images/lighting.png" alt="" />
         </div>
-        <div className="menu-bar-item">
+        <NavLink to="/earn" className={`menu-bar-item ${isActive('/earn') ? 'active' : ''}`}>
           <IcEarn />
           <div className="menu-bar-name text-1">
             Earn
           </div>
-        </div>
-        <div className="menu-bar-item">
+        </NavLink>
+        <NavLink to="/airdrop" className={`menu-bar-item ${isActive('/airdrop') ? 'active' : ''}`}>
           <img src="/images/token.png" alt="" />
           <div className="menu-bar-name text-1">
             Airdrop
           </div>
-        </div>
+        </NavLink>
       </div>
     </div>
   )

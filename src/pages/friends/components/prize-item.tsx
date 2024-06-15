@@ -10,18 +10,18 @@ const PrizeItem = ({ amount, title }: PrizeItemProps) => {
   };
 
   return (
-    <div className="bg-[#282A2F] rounded-xl flex items-center gap-4 px-6 py-8 cursor-pointer">
-      <div>
-        <img src="/images/chest.png" alt="character avatar" className="character-avt" />
+    <div className="bg-[#282A2F] rounded-xl flex items-center px-4 py-6 cursor-pointer">
+      <div className="mr-2">
+        <img src="/images/chest.png" alt="character avatar" />
       </div>
-      <div className="flex flex-col gap-3 ">
-        <p className="text-2xl">{title}</p>
-        <div className="flex gap-5">
-          <div className="flex flex-wrap gap-3">
-            <img src="/images/gold-coin.png" alt="coin" />
-            <p className="text-[#FCD74B] text-xl">{formatAmount(amount)}</p>
+      <div className="flex flex-col gap-1">
+        <p className="text-base">{title}</p>
+        <div className="flex gap-2">
+          <div className="flex align-items">
+            <img className="w-3 mr-1 h-auto" src="/images/gold-coin.png" alt="coin" />
+            <div className="text-[#FCD74B] text-sm">{formatAmount(amount)}</div>
           </div>
-          <p className="text-xl">{amountSuffix}</p>
+          <p className="text-sm">{amountSuffix}</p>
         </div>
       </div>
     </div>

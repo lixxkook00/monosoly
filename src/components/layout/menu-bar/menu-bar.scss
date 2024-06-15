@@ -47,6 +47,15 @@
 
     padding-top: 2%;
 
+    &.active {
+      path {
+        fill: #fff;
+      }
+      .menu-bar-name {
+        color: #fff;
+      }
+    }
+
     &.main {
       transform: translateY(-50%);
 

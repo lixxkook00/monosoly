@@ -1,6 +1,6 @@
 import { Icon } from "./type";
 
-const IcFriends: React.FC<Icon> = ({ color = '#848484' }) => {
+const IcFriends: React.FC<Icon> = ({ color = '#848484', isActive }) => {
   return <>
     <svg width="35" height="28" viewBox="0 0 35 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M23.5789 6.07895C23.5789 9.43626 20.8573 12.1579 17.5 12.1579C14.1427 12.1579 11.421 9.43626 11.421 6.07895C11.421 2.72164 14.1427 0 17.5 0C20.8573 0 23.5789 2.72164 23.5789 6.07895Z" fill={color}/>
