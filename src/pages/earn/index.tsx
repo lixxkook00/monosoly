@@ -12,14 +12,14 @@ const Earn = () => {
       id: 1,
       amount: 100000,
       title: 'Tham gia kênh TG của chúng tôi',
-      checked: true,
+      checked: false,
       img: 'ic-telegram.png'
     },
     {
       id: 2,
       amount: 100000,
       title: 'Hàng hoá MonoSoly',
-      checked: true,
+      checked: false,
       img: 'ic-x.png'
     },
     {
@@ -33,7 +33,7 @@ const Earn = () => {
       id: 4,
       amount: 100000,
       title: 'Hàng hoá MonoSoly',
-      checked: true,
+      checked: false,
       img: 'ic-youtube.png'
     }
   ];
@@ -44,17 +44,17 @@ const Earn = () => {
         <img className="w-full" src="/images/map-full.png" alt="map" />
       </div>
 
-      <div className="absolute w-full max-h-full backdrop-blur-3xl px-5 pt-5 pb-[32%] overflow-y-scroll">
-        <section className="flex flex-col items-center p-5 gap-3">
+      <div className="absolute w-full h-full backdrop-blur-3xl px-5 pt-5 pb-[32%] overflow-y-scroll">
+        <section className="flex flex-col items-center gap-1">
           <img src="/images/token.png" alt="token" />
-          <p className="text-center text-5xl">{heading}</p>
+          <p className="text-center text-3xl">{heading}</p>
         </section>
 
         <section className="w-full flex flex-col gap-2">
           <TaskList title={dailyTitle} items={dailyTask} />
         </section>
 
-        <section className="w-full flex flex-col gap-2 pt-10">
+        <section className="w-full flex flex-col gap-2 pt-4">
           <TaskList title={workTitle} items={generalTask} />
         </section>
       </div>

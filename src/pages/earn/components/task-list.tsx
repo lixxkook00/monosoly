@@ -9,11 +9,11 @@ interface TaskListProps {
 const TaskList = ({ title, items }: TaskListProps) => {
   return (
     <>
-      <div className="">
-        <p className="text-xl">{title}</p>
+      <div className="mt-4">
+        <p className="text-lg">{title}</p>
       </div>
 
-      <div className="flex flex-col align-center gap-3">
+      <div className="flex flex-col align-center gap-2">
         {items.map(({ id, amount, title, img, checked }) => (
           <Task key={id} amount={amount} title={title} checked={checked} img={img} />
         ))}
