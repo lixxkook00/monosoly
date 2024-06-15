@@ -19,31 +19,42 @@ const Menubar = () => {
       <div className="menu-bar-content">
         <NavLink to="/friends" className={`menu-bar-item ${isActive('/friends') ? 'active' : ''}`}>
           <IcFriends />
-          <div className="menu-bar-name text-1">
+          <div className="menu-bar-name text-sm">
             Friends
           </div>
         </NavLink>
         <NavLink to="/mine" className={`menu-bar-item ${isActive('/mine') ? 'active' : ''}`}>
           <IcMine />
-          <div className="menu-bar-name text-1">
+          <div className="menu-bar-name text-sm">
             Mine
           </div>
         </NavLink>
-        <div className="menu-bar-item main" onClick={() => navigate('/game')}>
-          <div className="menu-bar-name primary-gold text-5">
-            5/6
-          </div>
-          <img src="/images/lighting.png" alt="" />
+        <div className={`menu-bar-item main ${!isActive('/game') && 'p-0'}`} onClick={() => navigate('/game')}>
+          {
+            isActive('/game')
+            ?
+            <>
+              <div className="menu-bar-name primary-gold text-5">
+                5/6
+              </div>
+              <img src="/images/lighting.png" alt="" />
+            </>
+            :
+            <div className="menu-bar-name text-5 m-0 p-0">
+              Go
+            </div>
+          }
+          
         </div>
         <NavLink to="/earn" className={`menu-bar-item ${isActive('/earn') ? 'active' : ''}`}>
           <IcEarn />
-          <div className="menu-bar-name text-1">
+          <div className="menu-bar-name text-sm">
             Earn
           </div>
         </NavLink>
         <NavLink to="/airdrop" className={`menu-bar-item ${isActive('/airdrop') ? 'active' : ''}`}>
           <img src="/images/token.png" alt="" />
-          <div className="menu-bar-name text-1">
+          <div className="menu-bar-name text-sm">
             Airdrop
           </div>
         </NavLink>

@@ -1,8 +1,16 @@
 import '../styles/user-level.scss'
 import { IcInfor } from "../../../icons";
+import { useMemo } from 'react';
 
 const UserLevel : React.FC = () => {
-  return <div className="user-level">
+
+  // const bottom = document.querySelector('.menu-bar')?.innerHTML * 2
+
+  const bottom = useMemo(() => {
+    return ((1.22 * (document.querySelector('.menu-bar')?.clientHeight ?? 0)) / window.innerHeight) * 100 + '%';
+  }, []);
+
+  return <div className="user-level" style={{ bottom }}>
     <div className="mono-container">
       <div className="user-level-bar p-4 px-6 mb-2">
         <div className="flex align-center justify-between">
@@ -26,7 +34,7 @@ const UserLevel : React.FC = () => {
             Up to level
           </span>
           <span className="font-semibold flex align-center justify-center">
-            <span>+1</span> <img src="/images/lighting.png" alt="" className="w-3 ml-1" />
+            <span>+1</span> <img src="/images/lighting.png" alt="" className="w-3 ml-1 object-contain" />
           </span>
         </div>
 
@@ -35,7 +43,7 @@ const UserLevel : React.FC = () => {
             Lợi nhuận mỗi giờ
           </span>
           <span className="font-semibold flex align-center justify-center">
-            <img src="/images/gold-coin.png" alt="" className="w-6 mr-1" /> <span className='mr-1'>+1,2K</span> <IcInfor />
+            <img src="/images/gold-coin.png" alt="" className="w-4 mr-1 object-contain" /> <span className='mr-1'>+1,2K</span> <IcInfor />
           </span>
         </div>
       </div>
