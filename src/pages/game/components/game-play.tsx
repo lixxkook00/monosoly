@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { SLOTS, TRANSITION_END } from '../../../constants';
+import { Character, Dice, ResultText } from './index';
+
 import '../styles/game-play.scss'
-import Character from './character';
-import Dice from './dice';
 
 const GamePlay = () => {
   const characterRef = useRef<HTMLDivElement>(null);
@@ -58,6 +58,8 @@ const GamePlay = () => {
         <Dice moveTo={moveTo} />
 
         <Character ref={characterRef} x={getPosition(currentSlot).x} y={getPosition(currentSlot).y} />
+
+        <ResultText data='+100' />
     </div>
   )
 }
