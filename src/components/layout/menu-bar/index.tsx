@@ -29,12 +29,12 @@ const Menubar = () => {
             Mine
           </div>
         </NavLink>
-        <div className={`menu-bar-item main ${!isActive('/game') && 'p-0'}`} onClick={() => navigate('/game')}>
+        <div className={`menu-bar-item main ${!isActive('/game') ? 'p-0' : 'pt-4'}`} onClick={() => navigate('/game')}>
           {
             isActive('/game')
             ?
             <>
-              <div className="menu-bar-name primary-gold text-5">
+              <div className="menu-bar-name primary-gold text-4xl">
                 5/6
               </div>
               <img src="/images/lighting.png" alt="" />
