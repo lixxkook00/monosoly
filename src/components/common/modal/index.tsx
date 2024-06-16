@@ -7,9 +7,10 @@ import { close } from "../../../contexts/modal-slice";
 
 interface Props {
   openKey: keyof ModalState;
+  content: React.ReactNode;  // Add this line
 }
 
-const Modal: React.FC<Props> = ({ openKey }) => {
+const Modal: React.FC<Props> = ({ openKey, content }) => {  // Add content here
   const open = useSelector((state: RootState) => state.modal[openKey]);
   const dispatch = useDispatch();
 
@@ -17,12 +18,12 @@ const Modal: React.FC<Props> = ({ openKey }) => {
     dispatch(close(openKey));
   }
 
-  return <div className={`${open ? '' : 'translate-y-full' } modal transition-all duration-300 bg-[#1B1E23] absolute bottom-0 left-0 w-full p-3 pb-8 flex items-center justify-center h-fit z-10 rounded-t-xl`}>
-    <div onClick={handleClose} className="close absolute top-3 right-3">
+  return <div style={{ transform: `translateY(${open ? 0 : '120%' })` }} className={`modal transition-all duration-300 bg-[#1B1E23] absolute bottom-0 left-0 w-full p-3 pb-8 flex items-center justify-center h-fit z-10 rounded-t-2xl modal`}>
+    <div onClick={handleClose} className="close absolute top-4 right-4">
       <IcTime />
     </div>
 
-    <span>content</span>
+    {content}  {/* Use content here */}
   </div>
 }
 

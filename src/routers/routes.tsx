@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
 

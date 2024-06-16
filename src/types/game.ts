@@ -22,6 +22,6 @@ export type SetStateType<T> = React.Dispatch<React.SetStateAction<T>>;
 
 export interface ModalState {
   teleTaskModal: boolean;
-  youtubeTaskModal: boolean;
+  dailyTaskModal: boolean;
 }
 

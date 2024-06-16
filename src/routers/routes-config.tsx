@@ -1,4 +1,4 @@
-import React, { ComponentType, lazy, LazyExoticComponent } from 'react';
+import React, { ComponentType, LazyExoticComponent } from 'react';
 import { Navigate, RouteObject } from 'react-router-dom';
 
 const lazyWithPreload = (

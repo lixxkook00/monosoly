@@ -8,7 +8,7 @@ const Game = () => {
     <>
       <MoveTransition y="-10vh">  
         <div className="absolute w-full p-5">
-          <ProfileBar img="" name={'Admin'} />
+          <ProfileBar />
         </div>
       </MoveTransition>
 

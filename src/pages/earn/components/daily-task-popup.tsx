@@ -1,14 +1,18 @@
 import { MonoButton } from "../../../components";
 import { formatAmount } from "../../../utils";
 
-const TeleTaskModal: React.FC = () => {
+const DailyTaskModal: React.FC = () => {
   return <>
     <section className="flex flex-col items-center gap-1">
-      <img className="w-15 mb-6 mt-6" src="/images/ic-telegram.png" alt="token" />
-      <p className="text-center text-3xl px-3 mb-3 font-semibold">
+      <img className="w-15 mb-6 mt-1" src="/images/mission.png" alt="token" />
+      <p className="text-center text-3xl px-3 mb-2 font-semibold">
         Tham gia kênh TG của
         <br />
         chúng tôi
+      </p>
+
+      <p className="text-sm px-5 text-center">
+        Tích lũy xu khi đăng nhập vào trò chơi hàng ngày mà không cần bỏ qua. Nút “thu nhập” phải được nhấn  hàng ngày, nếu không việc đếm ngày sẽ bắt đầu lại
       </p>
 
       <MonoButton label="Join" onClick={() => {}} className="px-8"/>
@@ -21,4 +25,4 @@ const TeleTaskModal: React.FC = () => {
   </>
 }
 
-export default TeleTaskModal;
+export default DailyTaskModal;

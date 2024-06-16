@@ -5,15 +5,16 @@ export interface TaskProps {
   title: string;
   img: string;
   checked: boolean;
+  onClick?: () => void;
 }
 
-const Task = ({ amount, title, img, checked }: TaskProps) => {
+const Task = ({ amount, title, img, checked, onClick }: TaskProps) => {
   const formatAmount = (amount: number) => {
     return '+ ' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
   return (
-    <div className="bg-[#282A2F] rounded-xl flex items-center gap-2 px-4 py-2 cursor-pointer">
+    <div onClick={onClick} className="bg-[#282A2F] rounded-xl flex items-center gap-2 px-4 py-2 cursor-pointer">
       <div>
         <img className='w-24' src={`/images/${img}`} alt="" />
       </div>

@@ -27,7 +27,7 @@ const Mine = () => {
 
         <MoveTransition y="-10vh">
           <section className="w-full flex flex-col gap-2">
-            <ProfileBar img="" name={username} />
+            <ProfileBar />
           </section>
         </MoveTransition>
 

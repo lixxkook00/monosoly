@@ -2,8 +2,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ModalState } from '../types';
 
 const initialState: ModalState = {
-  teleTaskModal: true,
-  youtubeTaskModal: false,
+  teleTaskModal: false,
+  dailyTaskModal: true,
 };
 
 export const modalReducer = createSlice({

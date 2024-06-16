@@ -1,7 +1,11 @@
+import { useDispatch } from 'react-redux';
 import { Background, MoveTransition } from '../../components';
 import { TaskList } from './components';
+import { show } from '../../contexts/modal-slice';
 
 const Earn = () => {
+  const dispatch = useDispatch();
+
   const heading = 'Kiếm thêm tiền';
   const dailyTitle = 'Nhiệm vụ hàng ngày';
   const workTitle = 'Danh sách công việc';
@@ -14,7 +18,8 @@ const Earn = () => {
       amount: 100000,
       title: 'Tham gia kênh TG của chúng tôi',
       checked: false,
-      img: 'ic-telegram.png'
+      img: 'ic-telegram.png',
+      onClick: () => dispatch(show('teleTaskModal'))
     },
     {
       id: 2,

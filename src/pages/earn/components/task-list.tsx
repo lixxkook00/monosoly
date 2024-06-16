@@ -14,8 +14,8 @@ const TaskList = ({ title, items }: TaskListProps) => {
       </div>
 
       <div className="flex flex-col align-center gap-2">
-        {items.map(({ id, amount, title, img, checked }) => (
-          <Task key={id} amount={amount} title={title} checked={checked} img={img} />
+        {items.map(({ id, amount, title, img, checked, onClick }) => (
+          <Task key={id} amount={amount} title={title} checked={checked} img={img} onClick={onClick}/>
         ))}
       </div>
     </>
