@@ -3,6 +3,7 @@ import { ProfileBar } from '../mine/components';
 import { GamePlay, UserLevel } from './components';
 
 const Game = () => {
+
   return (
     <>
       <MoveTransition y="-10vh">  
