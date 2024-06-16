@@ -3,7 +3,6 @@ import { SLOTS, TRANSITION_END } from '../../../constants';
 import { Character, Dice, ResultText } from './index';
 
 import '../styles/game-play.scss'
-import { SlotType } from '../../../types';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../contexts/store';
 import { useDispatch } from 'react-redux';

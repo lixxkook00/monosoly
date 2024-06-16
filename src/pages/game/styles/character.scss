@@ -17,9 +17,13 @@
     border: 3px solid red;
     border-radius: 50%;
     object-fit: cover;
+    transition: all 0.3s linear;
+    animation: pluse 0.5s ease-in-out infinite alternate forwards;
   }
 
   &-arrow {
     width: 50%;
+    transition: all 0.3s linear;
+    animation: idle-y 0.5s ease-in-out infinite alternate forwards;
   }
 }
