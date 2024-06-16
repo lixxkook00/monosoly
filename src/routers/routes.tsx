@@ -1,13 +1,20 @@
-import { Suspense } from 'react'
-import { useRoutes } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion';
+import { Suspense } from 'react';
+import { useRoutes } from 'react-router-dom';
 
-import { routesConfig } from './routes-config'
-import { Loading } from '../components'
+import { Loading } from '../components';
+import { routesConfig } from './routes-config';
 
 const AppRoutes = () => {
-  const routes = useRoutes(routesConfig)
+  const routes = useRoutes(routesConfig);
 
-  return <Suspense fallback={<Loading />}>{routes}</Suspense>
-}
+  return (
+    <Suspense fallback={<Loading />}>
+      <AnimatePresence>
+          {routes}
+      </AnimatePresence>
+    </Suspense>
+  );
+};
 
-export default AppRoutes
+export default AppRoutes;

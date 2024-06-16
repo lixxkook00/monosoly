@@ -1,3 +1,4 @@
+import { Background, MoveTransition } from '../../components';
 import { TaskList } from './components';
 
 const Earn = () => {
@@ -40,24 +41,23 @@ const Earn = () => {
 
   return (
     <>
-      <div className="absolute scale-[1.25] h-full flex items-center">
-        <img className="w-full" src="/images/map-full.png" alt="map" />
-      </div>
+      <Background />
+      <MoveTransition y="100vh">
+        <div className="absolute w-full h-full backdrop-blur-3xl px-2 pt-2 pb-[32%] overflow-y-scroll">
+          <section className="flex flex-col items-center gap-1">
+            <img src="/images/token.png" alt="token" />
+            <p className="text-center text-3xl">{heading}</p>
+          </section>
 
-      <div className="absolute w-full h-full backdrop-blur-3xl px-2 pt-2 pb-[32%] overflow-y-scroll">
-        <section className="flex flex-col items-center gap-1">
-          <img src="/images/token.png" alt="token" />
-          <p className="text-center text-3xl">{heading}</p>
-        </section>
+          <section className="w-full flex flex-col gap-2">
+            <TaskList title={dailyTitle} items={dailyTask} />
+          </section>
 
-        <section className="w-full flex flex-col gap-2">
-          <TaskList title={dailyTitle} items={dailyTask} />
-        </section>
-
-        <section className="w-full flex flex-col gap-2 pt-4">
-          <TaskList title={workTitle} items={generalTask} />
-        </section>
-      </div>
+          <section className="w-full flex flex-col gap-2 pt-4">
+            <TaskList title={workTitle} items={generalTask} />
+          </section>
+        </div>
+      </MoveTransition>
     </>
   );
 };

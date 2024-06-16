@@ -1,16 +1,16 @@
-import { ProfileBar } from "../mine/components";
-import { GamePlay, UserLevel } from "./components";
+import { ProfileBar } from '../mine/components';
+import { GamePlay, UserLevel } from './components';
 
 const Game = () => {
-  return <>
-    <div className="absolute w-full p-5">
-      <ProfileBar img="" name={'Admin'} />
-    </div>
-
-    <GamePlay />
-
-    <UserLevel />
-  </>
-}
+  return (
+    <>
+      <div className="absolute w-full p-5">
+        <ProfileBar img="" name={'Admin'} />
+      </div>
+      <GamePlay />
+      <UserLevel />
+    </>
+  );
+};
 
 export default Game;
