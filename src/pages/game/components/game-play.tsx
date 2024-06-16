@@ -9,9 +9,12 @@ const GamePlay = () => {
   const [currentSlot, setCurrentSlot] = useState<number>(0);
   const [targetStep, setTargetStep] = useState<number>(0);
   const [stepsTaken, setStepsTaken] = useState<number>(0);
+  const [result, setResult] = useState<string>('');
 
   const moveTo = (steps: number): void => {
     characterRef.current && characterRef.current.removeEventListener(TRANSITION_END, handleTransitionEnd);
+    
+    setResult('')
     setTargetStep(steps);
     setStepsTaken(1);
     stepUp();
@@ -30,6 +33,8 @@ const GamePlay = () => {
     } else {
       setTargetStep(0);
       setStepsTaken(0);
+
+      setResult('+100')
     }
   };
 
@@ -59,7 +64,7 @@ const GamePlay = () => {
 
         <Character ref={characterRef} x={getPosition(currentSlot).x} y={getPosition(currentSlot).y} />
 
-        <ResultText data='+100' />
+        <ResultText data={result} />
     </div>
   )
 }
