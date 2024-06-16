@@ -1,4 +1,5 @@
-import { TaskList } from './components';
+import { Modal } from '../../components';
+import { TaskList, TeleTaskModal } from './components';
 
 const Earn = () => {
   const heading = 'Kiếm thêm tiền';

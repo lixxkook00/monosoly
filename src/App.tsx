@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import AppRoutes from './routers/routes';
-import { MenuBar } from './components';
+import { MenuBar, Modal } from './components';
 
 function App() {
   return (
@@ -10,6 +10,8 @@ function App() {
         <AppRoutes />
         
         <MenuBar />
+
+        <Modal openKey="teleTaskModal" />
         
       </Router>
     </div>
