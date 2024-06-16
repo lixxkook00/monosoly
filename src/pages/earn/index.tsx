@@ -10,7 +10,7 @@ const Earn = () => {
   const dailyTitle = 'Nhiệm vụ hàng ngày';
   const workTitle = 'Danh sách công việc';
   const dailyTask = [
-    { id: 1, amount: 100000, title: 'Checkin hằng ngày', checked: true, img: 'chest.png' }
+    { id: 1, amount: 100000, title: 'Checkin hằng ngày', checked: true, img: 'chest.png', onClick: () => dispatch(show('dailyTaskModal')) }
   ];
   const generalTask = [
     {
@@ -32,7 +32,7 @@ const Earn = () => {
       id: 3,
       amount: 100000,
       title: 'Hàng hoá MonoSoly',
-      checked: true,
+      checked: false,
       img: 'ic-youtube.png'
     },
     {

@@ -3,7 +3,7 @@ import { ModalState } from '../types';
 
 const initialState: ModalState = {
   teleTaskModal: false,
-  dailyTaskModal: true,
+  dailyTaskModal: false,
 };
 
 export const modalReducer = createSlice({

@@ -18,12 +18,12 @@ const Modal: React.FC<Props> = ({ openKey, content }) => {  // Add content here
     dispatch(close(openKey));
   }
 
-  return <div style={{ transform: `translateY(${open ? 0 : '120%' })` }} className={`modal transition-all duration-300 bg-[#1B1E23] absolute bottom-0 left-0 w-full p-3 pb-8 flex items-center justify-center h-fit z-10 rounded-t-2xl modal`}>
+  return <div style={{ transform: `translateY(${open ? 0 : '120%' })` }} className={`modal transition-all duration-300 bg-[#1B1E23] absolute bottom-0 left-0 w-full p-3 pb-8 h-fit z-10 rounded-t-2xl modal max-h-95 overflow-hidden`}>
     <div onClick={handleClose} className="close absolute top-4 right-4">
       <IcTime />
     </div>
 
-    {content}  {/* Use content here */}
+    {content}
   </div>
 }
 
