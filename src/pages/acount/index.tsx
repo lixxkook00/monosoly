@@ -12,10 +12,10 @@ const Account = () => {
     { id: 1, decs: '7/7 có sẵn', title: 'Full energy', img: 'gold-coin-large.png' },
     { id: 2, decs: 'Sắp ra mắt', title: 'Turbo', img: 'rocket.png' },
   ];
-  const generalTask = [
-    { id: 1, decs: '5 lvl', title: 'Thời gian hồi', img: 'lighting-large.png' },
-    { id: 2, decs: '5 lvl', title: 'Energy limit', img: 'lighting-large.png' },
-  ];
+  // const generalTask = [
+  //   { id: 1, decs: '5 lvl', title: 'Thời gian hồi', img: 'lighting-large.png' },
+  //   { id: 2, decs: '5 lvl', title: 'Energy limit', img: 'lighting-large.png' },
+  // ];
 
   return (
     <>

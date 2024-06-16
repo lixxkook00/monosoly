@@ -3,9 +3,10 @@ import { IcInfor } from "../../../icons";
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../contexts/store';
+import { useNavigate } from 'react-router-dom';
 
 const UserLevel : React.FC = () => {
-
+  const navigate = useNavigate();
   const { level, levelProcess } = useSelector((state: RootState) => state.user);
 
   const bottom = useMemo(() => {
@@ -31,7 +32,7 @@ const UserLevel : React.FC = () => {
       </div>
 
       <div className="flex align-center justify-between">
-        <div className="flex align-center justify-center flex-col">
+        <div onClick={() => navigate('/account')} className="flex align-center justify-center flex-col">
           <span className="text-sm font-light">
             Up to level
           </span>

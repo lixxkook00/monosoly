@@ -70,7 +70,7 @@ const DailyTaskModal: React.FC = () => {
 
       <div className="grid grid-cols-4 gap-3 w-full mt-3">
         {
-          awards.map(({day, award, isClaimed}) => <DailyTask day={day} award={award} isClaimed={isClaimed} /> )
+          awards.map(({day, award, isClaimed}) => <DailyTask key={day} day={day} award={award} isClaimed={isClaimed} /> )
         }
       </div>
 

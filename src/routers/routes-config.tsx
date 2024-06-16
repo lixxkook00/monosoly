@@ -1,4 +1,4 @@
-import React, { ComponentType, LazyExoticComponent } from 'react';
+import React, { ComponentType, lazy, LazyExoticComponent } from 'react';
 import { Navigate, RouteObject } from 'react-router-dom';
 
 const lazyWithPreload = (
@@ -24,6 +24,7 @@ const EarnPage = lazyWithPreload(() => import('../pages/earn'), '/images/token.p
 const AccountPage = lazyWithPreload(() => import('../pages/acount'), '/images/token.png');
 const AirdropPage = lazyWithPreload(() => import('../pages/airdrop'), '/images/token.png');
 const MinePage = lazyWithPreload(() => import('../pages/mine'), '/images/token.png');
+const SettingsPage = lazy(() => import('../pages/settings'));
 
 const publicRoutesConfig: RouteObject = {
   path: '/',
@@ -55,6 +56,10 @@ const publicRoutesConfig: RouteObject = {
     {
       path: '/account',
       element: <AccountPage />
+    },
+    {
+      path: '/settings',
+      element: <SettingsPage />
     },
   ]
 };
