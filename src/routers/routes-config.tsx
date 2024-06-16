@@ -19,10 +19,10 @@ const lazyWithPreload = (
 };
 
 const GamePage = lazyWithPreload(() => import('../pages/game'), '/images/map-full.png');
-const FriendsPage = lazy(() => import('../pages/friends'));
-const EarnPage = lazy(() => import('../pages/earn'));
-const AirdropPage = lazy(() => import('../pages/airdrop'));
-const MinePage = lazy(() => import('../pages/mine'));
+const FriendsPage = lazyWithPreload(() => import('../pages/friends'), '/images/chest.png');
+const EarnPage = lazyWithPreload(() => import('../pages/earn'), '/images/token.png');
+const AirdropPage = lazyWithPreload(() => import('../pages/airdrop'), '/images/token.png');
+const MinePage = lazyWithPreload(() => import('../pages/mine'), '/images/token.png');
 
 const publicRoutesConfig: RouteObject = {
   path: '/',
