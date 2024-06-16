@@ -10,7 +10,7 @@ const UserLevel : React.FC = () => {
   const { level, levelProcess } = useSelector((state: RootState) => state.user);
 
   const bottom = useMemo(() => {
-    return ((((1.22 * (document.querySelector('.menu-bar')?.clientHeight ?? 84)) / window.innerHeight) * 100) || 10) + '%';
+    return ((((1.22 * (document.querySelector('.menu-bar')?.clientHeight ?? 84)) / window.innerHeight) * 100) || 12) + '%';
   }, []);
 
   return <div className="user-level" style={{ bottom }}>

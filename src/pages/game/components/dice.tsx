@@ -58,7 +58,7 @@ const Dice: React.FC<Props> = ({ moveTo }) => {
   }, [moveTo, state.canRoll]);
 
   return (
-    <div onClick={handleRoll} className="dice">
+    <div id='dice' onClick={handleRoll} className="dice">
       <div id="dice" key={state.rollCount} data-side={state.target} style={{ width: `${diceScale}px`, height: `${diceScale}px` }}>
         {diceStyles.map((style, index) => (
           <div key={index} className={`sides side-${index + 1}`} style={{ transform: `rotateX(${style.rotateX}deg) rotateY(${style.rotateY}deg) translateZ(${diceScale / 2 - 0.5}px)` }}>

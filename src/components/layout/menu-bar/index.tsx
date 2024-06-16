@@ -12,8 +12,13 @@ const Menubar = () => {
   const isActive = (path: string) => location.pathname === path;
   const energy = useSelector((state: RootState) => state.user.energy);
 
+  const handleRoll = () => {
+    const diceEl = document.querySelector<HTMLButtonElement>('#dice')
+    if(diceEl) diceEl.click();
+  }
+
   return (
-    <div className="menu-bar">
+    <div className={`menu-bar ${isActive('/') && 'hidden'}`}>
       <div className="menu-bar-bg">
         <img src="/images/bar-bg.png" alt="" />
         <img className='menu-bar-decor' src="/images/bar-center.png" alt="" />
@@ -37,7 +42,7 @@ const Menubar = () => {
             isActive('/game')
             ?
             <>
-              <div className="menu-bar-name primary-gold text-4xl">
+              <div onClick={handleRoll} className="menu-bar-name primary-gold text-4xl">
                 {energy}/6
               </div>
               <img src="/images/lighting.png" alt="" />

@@ -1,4 +1,4 @@
-import { Task } from './';
+import { Task } from '.';
 import { TaskProps } from './task';
 
 interface TaskListProps {
