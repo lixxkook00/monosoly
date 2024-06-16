@@ -10,7 +10,7 @@ const MissedCard = () => {
       energy: 1,
       total: 100,
       level: 1,
-      img: ''
+      img: 'package.jpg'
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const MissedCard = () => {
       energy: 1,
       total: 100,
       level: 1,
-      img: ''
+      img: 'package.jpg'
     }
   ];
 

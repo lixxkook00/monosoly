@@ -10,7 +10,7 @@ const NewCards = () => {
       energy: 1,
       total: 100,
       level: 1,
-      img: ''
+      img: 'package.jpg'
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const NewCards = () => {
       energy: 1,
       total: 100,
       level: 1,
-      img: ''
+      img: 'package.jpg'
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const NewCards = () => {
       energy: 1,
       total: 100,
       level: 1,
-      img: ''
+      img: 'package.jpg'
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const NewCards = () => {
       energy: 1,
       total: 100,
       level: 1,
-      img: ''
+      img: 'package.jpg'
     }
   ];
 
