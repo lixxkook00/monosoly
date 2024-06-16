@@ -4,10 +4,8 @@ import { useMemo } from 'react';
 
 const UserLevel : React.FC = () => {
 
-  // const bottom = document.querySelector('.menu-bar')?.innerHTML * 2
-
   const bottom = useMemo(() => {
-    return ((1.22 * (document.querySelector('.menu-bar')?.clientHeight ?? 0)) / window.innerHeight) * 100 + '%';
+    return ((1.22 * (document.querySelector('.menu-bar')?.clientHeight ?? 84)) / window.innerHeight) * 100 + '%';
   }, []);
 
   return <div className="user-level" style={{ bottom }}>
