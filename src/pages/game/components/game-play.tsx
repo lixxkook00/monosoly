@@ -3,18 +3,19 @@ import { SLOTS, TRANSITION_END } from '../../../constants';
 import { Character, Dice, ResultText } from './index';
 
 import '../styles/game-play.scss'
+import { SlotType } from '../../../types';
 
 const GamePlay = () => {
   const characterRef = useRef<HTMLDivElement>(null);
   const [currentSlot, setCurrentSlot] = useState<number>(0);
   const [targetStep, setTargetStep] = useState<number>(0);
   const [stepsTaken, setStepsTaken] = useState<number>(0);
-  const [result, setResult] = useState<string>('');
+  const [result, setResult] = useState({ amount: 0, type: 'award' });
 
   const moveTo = (steps: number): void => {
     characterRef.current && characterRef.current.removeEventListener(TRANSITION_END, handleTransitionEnd);
     
-    setResult('')
+    setResult({ amount: 0, type: 'award' })
     setTargetStep(steps);
     setStepsTaken(1);
     stepUp();
@@ -34,7 +35,7 @@ const GamePlay = () => {
       setTargetStep(0);
       setStepsTaken(0);
 
-      setResult('+100')
+      setResult({ amount: SLOTS[currentSlot].amount, type: SLOTS[currentSlot].type })
     }
   };
 
@@ -64,7 +65,7 @@ const GamePlay = () => {
 
         <Character ref={characterRef} x={getPosition(currentSlot).x} y={getPosition(currentSlot).y} />
 
-        <ResultText data={result} />
+        <ResultText amount={result.amount} type={result.type} />
     </div>
   )
 }

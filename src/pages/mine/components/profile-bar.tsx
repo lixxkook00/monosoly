@@ -1,10 +1,13 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../../../contexts/store";
+
 interface ProfileBarProps {
   img: string;
   name: string;
-  balance: number | string;
 }
 
-const ProfileBar = ({ img, name, balance }: ProfileBarProps) => {
+const ProfileBar = ({ img, name }: ProfileBarProps) => {
+  const balance = useSelector((state: RootState) => state.user.balance);
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center">
@@ -16,7 +19,7 @@ const ProfileBar = ({ img, name, balance }: ProfileBarProps) => {
       </div>
 
       <div className="flex items-center">
-        <div className="bg-[#282A2F] rounded-full p-2 py-1.5 mr-2 gap-2 flex items-center cursor-pointer">
+        <div className="bg-[#282A2F] rounded-full p-2 py-1.5 pl-3 mr-2 gap-2 flex items-center cursor-pointer">
           <p className="text-sm">{balance}</p>
           <img className="w-5" src="/images/gold-coin.png" alt="" />
         </div>

@@ -29,7 +29,7 @@ const Mine = () => {
 
       <div className="absolute w-full h-full backdrop-blur-3xl px-5 pt-5 pb-[30%] overflow-y-scroll">
         <section className="w-full flex flex-col gap-2">
-          <ProfileBar img="" name={username} balance={'12,43k'} />
+          <ProfileBar img="" name={username} />
         </section>
 
         <section className="flex flex-col items-center p-4 gap-1">

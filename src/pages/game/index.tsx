@@ -4,7 +4,7 @@ import { GamePlay, UserLevel } from "./components";
 const Game = () => {
   return <>
     <div className="absolute w-full p-5">
-      <ProfileBar img="" name={'Admin'} balance={'12,43k'} />
+      <ProfileBar img="" name={'Admin'} />
     </div>
 
     <GamePlay />

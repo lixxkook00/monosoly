@@ -6,12 +6,17 @@ import reportWebVitals from './reportWebVitals';
 
 import "tailwindcss/tailwind.css"
 import './index.css';
+import { store } from './contexts/store';
+
+import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <App />
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
