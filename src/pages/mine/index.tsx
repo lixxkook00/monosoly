@@ -22,17 +22,23 @@ const Mine = () => {
   return (
     <>
       <Background />
-      <MoveTransition y="100vh">
-        <div className="absolute w-full h-full backdrop-blur-3xl px-2 pt-2 pb-[30%] overflow-y-scroll">
+      
+      <div className="absolute w-full h-full backdrop-blur-3xl px-2 pt-2 pb-[30%] overflow-y-scroll">
+
+        <MoveTransition y="-10vh">
           <section className="w-full flex flex-col gap-2">
             <ProfileBar img="" name={username} />
           </section>
+        </MoveTransition>
 
+        <MoveTransition y="20vh">
           <section className="flex flex-col items-center p-4 gap-1">
             <img src="/images/token.png" alt="token" />
             <p className="text-center text-4xl">{formatAmount(heading)}</p>
           </section>
+        </MoveTransition>
 
+        <MoveTransition y="50vh">
           <section className="w-full flex flex-col gap-6 items-center">
             <div className="flex items-center justify-center bg-[#282A2F] p-1 gap-1 rounded-xl w-full">
               {buttonSettings.map(({ label }, index) => (
@@ -48,8 +54,9 @@ const Mine = () => {
 
             <ActiveCardComponent />
           </section>
-        </div>
-      </MoveTransition>
+        </MoveTransition>
+
+      </div>
     </>
   );
 };

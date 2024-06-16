@@ -15,11 +15,11 @@ const MoveTransition = ({ children, x, y }: MoveTransitionProps) => {
         type: 'spring',
         mass: 0.4
       }
-    }
+    },
   };
 
   return (
-    <motion.div className="h-full" variants={routeVariants} initial="initial" animate="animate">
+    <motion.div variants={routeVariants} initial="initial" animate="animate" transition={{ duration: 0.3 }}>
       {children}
     </motion.div>
   );

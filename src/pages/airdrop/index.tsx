@@ -11,14 +11,17 @@ const Airdrop = () => {
   return (
     <>
       <Background />
-      <MoveTransition y="100vh">
-        <div className="absolute w-full h-full backdrop-blur-3xl px-2 pt-2 pb-[32%] overflow-y-scroll">
+      
+      <div className="absolute w-full h-full backdrop-blur-3xl px-2 pt-2 pb-[32%] overflow-y-scroll">
+        <MoveTransition y="10vh">
           <section className="flex flex-col items-center gap-3">
             <img src="/images/token.png" alt="token" />
             <p className="text-center text-3xl">{heading}</p>
             <p className="text-center text-base mt-3 mb-5">{description}</p>
           </section>
+        </MoveTransition>
 
+        <MoveTransition y="30vh">
           <section className="w-full flex flex-col gap-2">
             <p className="text-lg font-semibold mb-1">{taskTitle}</p>
 
@@ -27,8 +30,8 @@ const Airdrop = () => {
               <span></span>
             </div>
           </section>
-        </div>
-      </MoveTransition>
+        </MoveTransition>
+      </div>
     </>
   );
 };

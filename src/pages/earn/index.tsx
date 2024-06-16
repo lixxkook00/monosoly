@@ -42,22 +42,28 @@ const Earn = () => {
   return (
     <>
       <Background />
-      <MoveTransition y="100vh">
-        <div className="absolute w-full h-full backdrop-blur-3xl px-2 pt-2 pb-[32%] overflow-y-scroll">
+      
+      <div className="absolute w-full h-full backdrop-blur-3xl px-2 pt-2 pb-[32%] overflow-y-scroll">
+
+        <MoveTransition y="10vh">
           <section className="flex flex-col items-center gap-1">
             <img src="/images/token.png" alt="token" />
             <p className="text-center text-3xl">{heading}</p>
           </section>
+        </MoveTransition>
 
+        <MoveTransition y="30vh">  
           <section className="w-full flex flex-col gap-2">
             <TaskList title={dailyTitle} items={dailyTask} />
           </section>
+        </MoveTransition>
 
+        <MoveTransition y="50vh">
           <section className="w-full flex flex-col gap-2 pt-4">
             <TaskList title={workTitle} items={generalTask} />
           </section>
-        </div>
-      </MoveTransition>
+        </MoveTransition>
+      </div>
     </>
   );
 };
