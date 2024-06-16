@@ -3,18 +3,16 @@ import { SLOTS, TRANSITION_END } from '../../../constants';
 import { Character, Dice, ResultText } from './index';
 
 import '../styles/game-play.scss'
-import { SlotType } from '../../../types';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../contexts/store';
 import { useDispatch } from 'react-redux';
-import { setPosition } from '../../../contexts/user-slice';
 
 const GamePlay = () => {
-  const position = useSelector((state: RootState) => state.user.position);
+  const position = useSelector((state: RootState) => state.user.energy);
   const dispatch = useDispatch();
 
   const characterRef = useRef<HTMLDivElement>(null);
-  const [currentSlot, setCurrentSlot] = useState<number>(position);
+  const [currentSlot, setCurrentSlot] = useState<number>(0);
   const [targetStep, setTargetStep] = useState<number>(0);
   const [stepsTaken, setStepsTaken] = useState<number>(0);
   const [result, setResult] = useState({ amount: 0, type: 'award' });
@@ -51,8 +49,6 @@ const GamePlay = () => {
     if (character) {
       character.addEventListener(TRANSITION_END, handleTransitionEnd);
     }
-
-    dispatch(setPosition(currentSlot));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlot]);
 
