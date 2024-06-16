@@ -2,12 +2,15 @@ import React from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { IcFriends, IcMine, IcEarn } from '../../../icons';
 import './menu-bar.scss';
+import { RootState } from '../../../contexts/store';
+import { useSelector } from 'react-redux';
 
 const Menubar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   const isActive = (path: string) => location.pathname === path;
+  const energy = useSelector((state: RootState) => state.user.energy);
 
   return (
     <div className="menu-bar">
@@ -35,7 +38,7 @@ const Menubar = () => {
             ?
             <>
               <div className="menu-bar-name primary-gold text-4xl">
-                5/6
+                {energy}/6
               </div>
               <img src="/images/lighting.png" alt="" />
             </>

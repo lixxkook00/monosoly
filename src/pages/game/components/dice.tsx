@@ -1,5 +1,9 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import '../styles/dice.scss';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../contexts/store';
+import { useDispatch } from 'react-redux';
+import { useEnergy } from '../../../contexts/user-slice';
 
 interface Props {
   moveTo: (number: number) => void;
@@ -23,12 +27,19 @@ const Dice: React.FC<Props> = ({ moveTo }) => {
     rollCount: 0,
   });
 
+  const energy = useSelector((state: RootState) => state.user.energy);
+  const dispatch = useDispatch();
+
   const diceScale = useMemo(() => {
     return 0.1 * (document.querySelector('#app')?.clientWidth ?? 0);
   }, []);
 
   const handleRoll = useCallback(() => {
     if (!state.canRoll) return;
+    if(energy === 0) return;
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    dispatch(useEnergy())
 
     const randomTarget = Math.floor(Math.random() * TARGET_LIMIT) + 1;
     setState(prevState => ({
@@ -42,6 +53,7 @@ const Dice: React.FC<Props> = ({ moveTo }) => {
       moveTo(randomTarget);
       setState(prevState => ({ ...prevState, canRoll: true }));
     }, 1000);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [moveTo, state.canRoll]);
 
   return (
