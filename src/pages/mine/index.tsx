@@ -55,7 +55,6 @@ const Mine = () => {
             <ActiveCardComponent />
           </section>
         </MoveTransition>
-
       </div>
     </>
   );

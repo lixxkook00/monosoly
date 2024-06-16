@@ -1,3 +1,4 @@
+import { MoveTransition } from '../../../components';
 import { Card } from './';
 
 const MissedCard = () => {
@@ -25,20 +26,22 @@ const MissedCard = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-2 w-full">
-      {cards.map(({ id, img, title, subtitle, amount, energy, total, level }) => (
-        <Card
-          key={id}
-          img={img}
-          title={title}
-          subtitle={subtitle}
-          amount={amount}
-          energy={energy}
-          total={total}
-          level={level}
-        />
-      ))}
-    </div>
+    <MoveTransition y="20vh">
+      <div className="grid grid-cols-2 gap-2 w-full">
+        {cards.map(({ id, img, title, subtitle, amount, energy, total, level }) => (
+          <Card
+            key={id}
+            img={img}
+            title={title}
+            subtitle={subtitle}
+            amount={amount}
+            energy={energy}
+            total={total}
+            level={level}
+          />
+        ))}
+      </div>
+    </MoveTransition>
   );
 };
 

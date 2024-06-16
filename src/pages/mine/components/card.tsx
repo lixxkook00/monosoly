@@ -1,3 +1,6 @@
+import { useDispatch } from "react-redux";
+import { show } from "../../../contexts/modal-slice";
+
 interface CardProps {
   img: string;
   title: string;
@@ -9,8 +12,11 @@ interface CardProps {
 }
 
 const Card = ({ img, title, subtitle, amount, energy, total, level }: CardProps) => {
+  const dispatch = useDispatch();
+
   return (
     <div
+      onClick={() => dispatch(show('packageModal'))}
       className="flex flex-col bg-[#282A2F] rounded-xl items-center p-2 w-full">
       <div className="flex items-start border-b-[#686A6D] border-b-2 pb-1 w-full">
         <div className="flex items-center rounded-2xl overflow-hidden w-1/3 min-w-16">
