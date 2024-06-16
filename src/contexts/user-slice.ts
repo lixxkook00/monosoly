@@ -4,12 +4,16 @@ interface UserState {
   balance: number;
   energy: number;
   position: number;
+  level: number;
+  levelProcess: number;
 }
 
 const initialState: UserState = {
   balance: 0,
   energy: 6,
   position: 0,
+  level: 2,
+  levelProcess: 20,
 };
 
 export const userSlice = createSlice({
@@ -30,10 +34,13 @@ export const userSlice = createSlice({
     },
     setPosition: (state, action: PayloadAction<number>) => {
       state.position = action.payload;
+    },
+    claimExp: (state) => {
+      state.levelProcess += 5;
     }
   },
 });
 
-export const { increment, decrement, incrementByAmount, useEnergy, setPosition } = userSlice.actions;
+export const { increment, decrement, incrementByAmount, useEnergy, setPosition, claimExp } = userSlice.actions;
 
 export default userSlice.reducer;

@@ -11,7 +11,7 @@ const PrizeList = () => {
   return (
     <>
       <div className="">
-        <p className="text-center text-xl">{title}</p>
+        <p className="text-center text-lg">{title}</p>
       </div>
 
       <div className="flex flex-col align-center gap-3">

@@ -1,11 +1,15 @@
 import '../styles/user-level.scss'
 import { IcInfor } from "../../../icons";
 import { useMemo } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../contexts/store';
 
 const UserLevel : React.FC = () => {
 
+  const { level, levelProcess } = useSelector((state: RootState) => state.user);
+
   const bottom = useMemo(() => {
-    return ((1.22 * (document.querySelector('.menu-bar')?.clientHeight ?? 84)) / window.innerHeight) * 100 + '%';
+    return ((((1.22 * (document.querySelector('.menu-bar')?.clientHeight ?? 84)) / window.innerHeight) * 100) || 10) + '%';
   }, []);
 
   return <div className="user-level" style={{ bottom }}>
@@ -17,12 +21,12 @@ const UserLevel : React.FC = () => {
           </span>
 
           <span className="text-sm font-light">
-            Level <span className="font-semibold">4/10</span>
+            Level <span className="font-semibold">{level}/10</span>
           </span>
         </div>
 
         <div className="user-level-process w-full h-6 mt-1 rounded-full">
-          <div className="user-level-process-value h-full rounded-full" style={{width: '45%'}}></div>
+          <div className="user-level-process-value h-full rounded-full" style={{width: `${levelProcess}%`}}></div>
         </div>
       </div>
 

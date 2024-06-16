@@ -19,7 +19,7 @@ const Card = ({ img, title, subtitle, amount, energy, total, level }: CardProps)
 
         <div className="flex flex-col gap-1">
           <div>
-            <p className="text-base">{title}</p>
+            <p className="text-sm">{title}</p>
           </div>
           <div className="flex flex-col">
             <p className="text-xs text-[#686A6D]">{subtitle}</p>

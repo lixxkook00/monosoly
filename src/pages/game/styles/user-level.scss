@@ -14,6 +14,7 @@
     border: 2px solid #ffffff;
 
     &-value {
+      transition: all 0.5s ease-in-out;
       background: linear-gradient(90deg, rgba(255,204,1,1) 0%, rgba(255,123,0,1) 100%);
     }
   }

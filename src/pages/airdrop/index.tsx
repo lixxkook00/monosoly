@@ -12,7 +12,7 @@ const Airdrop = () => {
         <img className="w-full" src="/images/map-full.png" alt="map" />
       </div>
 
-      <div className="absolute w-full h-full backdrop-blur-3xl px-5 pt-5 pb-[32%] overflow-y-scroll">
+      <div className="absolute w-full h-full backdrop-blur-3xl px-2 pt-2 pb-[32%] overflow-y-scroll">
         <section className="flex flex-col items-center gap-3">
           <img src="/images/token.png" alt="token" />
           <p className="text-center text-3xl">{heading}</p>

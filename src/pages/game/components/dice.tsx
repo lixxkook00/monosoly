@@ -3,7 +3,7 @@ import '../styles/dice.scss';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../contexts/store';
 import { useDispatch } from 'react-redux';
-import { useEnergy } from '../../../contexts/user-slice';
+import { claimExp, useEnergy } from '../../../contexts/user-slice';
 
 interface Props {
   moveTo: (number: number) => void;
@@ -40,6 +40,7 @@ const Dice: React.FC<Props> = ({ moveTo }) => {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     dispatch(useEnergy())
+    dispatch(claimExp())
 
     const randomTarget = Math.floor(Math.random() * TARGET_LIMIT) + 1;
     setState(prevState => ({

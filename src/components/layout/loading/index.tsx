@@ -4,7 +4,7 @@ const Loading: React.FC = () => {
       <img className="w-full" src="/images/map-full.png" alt="map" />
     </div>
 
-    <div className="absolute w-full max-h-full min-h-full backdrop-blur-3xl px-5 pt-5 pb-[32%] overflow-y-scroll"></div>
+    <div className="absolute w-full max-h-full min-h-full backdrop-blur-3xl px-2 pt-2 pb-[32%] overflow-y-scroll"></div>
   </>
   
 }

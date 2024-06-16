@@ -10,12 +10,12 @@ const FriendList = () => {
 
   return (
     <div className="flex justify-center flex-col">
-      <p className="text-center text-3xl mb-5">{title}</p>
-      <p className="text-xl mb-2">{subtitle}</p>
+      <p className="text-center text-2xl mb-5 font-semibold">{title}</p>
+      <p className="text-lg mb-2 font-semibold">{subtitle}</p>
 
       <div className="bg-[#282A2F] rounded-xl p-10 mb-3">
         {friends.length === 0 ? (
-          <p className="text-center text-xl text-[#686A6D] font-bold">{emptyFriendList}</p>
+          <p className="text-center text-lg text-[#686A6D] font-bold">{emptyFriendList}</p>
         ) : (
           friends.map(({ id }) => <div key={id}></div>)
         )}

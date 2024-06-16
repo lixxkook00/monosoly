@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../../contexts/store";
+import { formatAmount } from "../../../utils";
 
 interface ProfileBarProps {
   img: string;
@@ -20,7 +21,7 @@ const ProfileBar = ({ img, name }: ProfileBarProps) => {
 
       <div className="flex items-center">
         <div className="bg-[#282A2F] rounded-full p-2 py-1.5 pl-3 mr-2 gap-2 flex items-center cursor-pointer">
-          <p className="text-sm">{balance}</p>
+          <p className="text-sm">{formatAmount(balance)}</p>
           <img className="w-5" src="/images/gold-coin.png" alt="" />
         </div>
 
