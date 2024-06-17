@@ -4,8 +4,11 @@ import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../contexts/store';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const UserLevel : React.FC = () => {
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
   const { level, levelProcess } = useSelector((state: RootState) => state.user);
 
@@ -18,7 +21,7 @@ const UserLevel : React.FC = () => {
       <div className="user-level-bar p-4 px-6 mb-2">
         <div className="flex align-center justify-between">
           <span className="text-sm font-light">
-            Experience
+            {t('experience')}
           </span>
 
           <span className="text-sm font-light">

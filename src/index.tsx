@@ -9,6 +9,8 @@ import { store } from './contexts/store';
 
 import { Provider } from 'react-redux';
 
+import './i18n';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
