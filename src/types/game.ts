@@ -24,5 +24,6 @@ export interface ModalState {
   teleTaskModal: boolean;
   dailyTaskModal: boolean;
   packageModal: boolean;
+  languageModal: boolean;
 }
 

@@ -5,6 +5,7 @@ const initialState: ModalState = {
   teleTaskModal: false,
   dailyTaskModal: false,
   packageModal: false,
+  languageModal: false,
 };
 
 export const modalReducer = createSlice({

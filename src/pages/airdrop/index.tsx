@@ -1,12 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import { Background, MoveTransition } from '../../components';
 
 const Airdrop = () => {
-  const heading = 'Airdrop task';
-  const description =
-    'Ngày listing đang đến. Nhiệm vụ sẽ xuất hiện bên dưới. Hoàn thành chúng để tham gia';
-  const taskTitle = 'Danh sách công việc';
+  const { t } = useTranslation();
 
-  const btnText = 'Kết nối với ví TON của bạn';
+  const heading = t('airdropTask');
+  const description = t('listingDayComing');
+  const taskTitle = t('taskList');
+  const btnText = t('connectToYourTONWallet');
 
   return (
     <>
@@ -17,7 +18,7 @@ const Airdrop = () => {
           <section className="flex flex-col items-center gap-3">
             <img src="/images/token.png" alt="token" />
             <p className="text-center text-3xl">{heading}</p>
-            <p className="text-center text-base mt-3 mb-5">{description}</p>
+            <p className="text-center text-base px-10 mt-3 mb-5">{description}</p>
           </section>
         </MoveTransition>
 

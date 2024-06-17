@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { MonoButton } from "../../../components";
 import { formatAmount } from "../../../utils";
 
 const PackagePopup: React.FC = () => {
+  const { t } = useTranslation();
+
   return <>
     <section className="flex flex-col items-center gap-1 pb-6">
       <img className="w-20 mb-6 mt-6 rounded-xl" src="/images/package.jpg" alt="token" />
@@ -9,14 +12,12 @@ const PackagePopup: React.FC = () => {
         Fan tokens
       </p>
 
-      <p className="text-sm px-3 mb-3 text-center">
-        Tài sản kỹ thuật số mang lại trải nghiệm và
-        <br />
-        đặt quyền riêng cho người hâm mộ
+      <p className="text-sm px-16 mb-3 text-center">
+        {t('digitalAssetsExperience')}
       </p>
 
       <p className="text-xs px-3 text-center">
-        Lợi nhuận mỗi giờ
+        {t('profitPerHour')}
       </p>
       <div className="flex gap-1">
         <img className="object-contain w-4" src="/images/gold-coin.png" alt="coin" />
@@ -28,7 +29,7 @@ const PackagePopup: React.FC = () => {
         <p className="text-2xl font-semibold">+ {formatAmount(5000)}</p>
       </div>
 
-      <MonoButton label="Nhận" onClick={() => {}} className="px-8 py-4 w-full font-bold text-xl"/>
+      <MonoButton label={t('get')} onClick={() => {}} className="px-8 py-4 w-full font-bold text-xl"/>
     </section>
   </>
 }

@@ -5,6 +5,7 @@ import AppRoutes from './routers/routes';
 import Modal from './components/common/modal';
 import { DailyTaskModal, TeleTaskModal } from './pages/earn/components';
 import { PackagePopup } from './pages/mine/components';
+import { LanguagePopup } from './pages/settings/components';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Modal openKey="dailyTaskModal" content={<DailyTaskModal />} />
 
         <Modal openKey="packageModal" content={<PackagePopup />} />
+
+        <Modal openKey="languageModal" content={<LanguagePopup />} />
 
       </Router>
     </div>

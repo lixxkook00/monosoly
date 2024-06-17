@@ -1,5 +1,5 @@
 import React, { ComponentType, lazy, LazyExoticComponent } from 'react';
-import { Navigate, RouteObject } from 'react-router-dom';
+import { RouteObject } from 'react-router-dom';
 
 const lazyWithPreload = (
   importStatement: () => Promise<{ default: ComponentType<any> }>,

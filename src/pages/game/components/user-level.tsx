@@ -25,7 +25,7 @@ const UserLevel : React.FC = () => {
           </span>
 
           <span className="text-sm font-light">
-            Level <span className="font-semibold">{level}/10</span>
+          {t('level')} <span className="font-semibold">{level}/10</span>
           </span>
         </div>
 
@@ -37,7 +37,7 @@ const UserLevel : React.FC = () => {
       <div className="flex align-center justify-between">
         <div onClick={() => navigate('/account')} className="flex align-center justify-center flex-col">
           <span className="text-sm font-light">
-            Up to level
+          {t('upToLevel')}
           </span>
           <span className="font-semibold flex align-center justify-center">
             <span>+1</span> <img src="/images/lighting.png" alt="" className="w-3 ml-1 object-contain" />
@@ -46,7 +46,7 @@ const UserLevel : React.FC = () => {
 
         <div className="flex align-center justify-between flex-col">
           <span className="text-sm font-light">
-            Lợi nhuận mỗi giờ
+          {t('profitPerHour')}
           </span>
           <span className="font-semibold flex align-center justify-center">
             <img src="/images/gold-coin.png" alt="" className="w-4 mr-1 object-contain" /> <span className='mr-1'>+1,2K</span> <IcInfor />

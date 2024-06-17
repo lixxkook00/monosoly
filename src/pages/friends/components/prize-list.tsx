@@ -1,17 +1,20 @@
+import { useTranslation } from 'react-i18next';
 import { PrizeItem } from './';
 
-const items = [
-  { id: 1, amount: 5000, title: 'Mời bạn bè' },
-  { id: 2, amount: 5000, title: 'Mời bạn bè với Telegram cao cấp' }
-];
-
 const PrizeList = () => {
-  const title = 'Bạn và bạn bè sẽ nhận được phần thường';
+  const { t } = useTranslation();
+
+  const items = [
+    { id: 1, amount: 5000, title: t('inviteFriends') },
+    { id: 2, amount: 5000, title: t('inviteFriendsWithPremiumTelegram') }
+  ];
 
   return (
     <>
       <div className="">
-        <p className="text-center text-lg">{title}</p>
+        <p className="text-center text-lg">
+          {t('youAndFriendsWillReceiveReward')}
+        </p>
       </div>
 
       <div className="flex flex-col align-center gap-3">

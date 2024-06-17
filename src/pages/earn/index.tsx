@@ -2,21 +2,24 @@ import { useDispatch } from 'react-redux';
 import { Background, MoveTransition } from '../../components';
 import { TaskList } from './components';
 import { show } from '../../contexts/modal-slice';
+import { useTranslation } from 'react-i18next';
 
 const Earn = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
-  const heading = 'Kiếm thêm tiền';
-  const dailyTitle = 'Nhiệm vụ hàng ngày';
-  const workTitle = 'Danh sách công việc';
+  const heading = t('earnMoreMoney');
+  const dailyTitle = t('dailyTasks');
+  const workTitle = t('taskList');
+
   const dailyTask = [
-    { id: 1, amount: 100000, title: 'Checkin hằng ngày', checked: true, img: 'chest.png', onClick: () => dispatch(show('dailyTaskModal')) }
+    { id: 1, amount: 100000, title: t('dailyCheckin'), checked: true, img: 'chest.png', onClick: () => dispatch(show('dailyTaskModal')) }
   ];
   const generalTask = [
     {
       id: 1,
       amount: 100000,
-      title: 'Tham gia kênh TG của chúng tôi',
+      title: t('joinOurTGChannel'),
       checked: false,
       img: 'ic-telegram.png',
       onClick: () => dispatch(show('teleTaskModal'))
@@ -24,21 +27,21 @@ const Earn = () => {
     {
       id: 2,
       amount: 100000,
-      title: 'Hàng hoá MonoSoly',
+      title: t('monosolyGoods'),
       checked: false,
       img: 'ic-x.png'
     },
     {
       id: 3,
       amount: 100000,
-      title: 'Hàng hoá MonoSoly',
+      title: t('monosolyGoods'),
       checked: false,
       img: 'ic-youtube.png'
     },
     {
       id: 4,
       amount: 100000,
-      title: 'Hàng hoá MonoSoly',
+      title: t('monosolyGoods'),
       checked: false,
       img: 'ic-youtube.png'
     }

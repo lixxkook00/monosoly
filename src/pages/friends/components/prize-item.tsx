@@ -1,10 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 interface PrizeItemProps {
   amount: number;
   title: string;
 }
 
 const PrizeItem = ({ amount, title }: PrizeItemProps) => {
-  const amountSuffix = 'cho bạn và bạn của bạn';
+  const { t } = useTranslation();
+  
   const formatAmount = (amount: number) => {
     return '+' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
@@ -21,7 +24,7 @@ const PrizeItem = ({ amount, title }: PrizeItemProps) => {
             <img className="w-3 mr-1 object-contain" src="/images/gold-coin.png" alt="coin" />
             <div className="text-[#FCD74B] text-sm">{formatAmount(amount)}</div>
           </div>
-          <p className="text-sm">{amountSuffix}</p>
+          <p className="text-sm">{t('forYouAndYourFriends')}</p>
         </div>
       </div>
     </div>

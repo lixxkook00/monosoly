@@ -1,18 +1,19 @@
 import { useDispatch } from "react-redux";
 import { show } from "../../../contexts/modal-slice";
+import { useTranslation } from "react-i18next";
 
 interface CardProps {
   img: string;
   title: string;
-  subtitle: string;
   amount: number;
   energy: number;
   total: number;
   level: number;
 }
 
-const Card = ({ img, title, subtitle, amount, energy, total, level }: CardProps) => {
+const Card = ({ img, title, amount, energy, total, level }: CardProps) => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   return (
     <div
@@ -28,7 +29,7 @@ const Card = ({ img, title, subtitle, amount, energy, total, level }: CardProps)
             <p className="text-sm">{title}</p>
           </div>
           <div className="flex flex-col">
-            <p className="text-xs text-[#686A6D]">{subtitle}</p>
+            <p className="text-xs text-[#686A6D]">{t('profitPerHour')}</p>
             <div className="flex items-center gap-1">
               <p className="text-sm">{`+${amount}`}</p>
               <img className="w-3" src="/images/gold-coin.png" alt="" />

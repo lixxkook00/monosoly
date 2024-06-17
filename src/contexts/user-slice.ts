@@ -7,7 +7,11 @@ interface UserState {
   position: number;
   level: number;
   levelProcess: number;
+  language: string;
 }
+
+// Read initial language from localStorage
+const savedLanguage = localStorage.getItem('language') || 'en';
 
 const initialState: UserState = {
   userName: 'Admin',
@@ -16,6 +20,7 @@ const initialState: UserState = {
   position: 0,
   level: 2,
   levelProcess: 20,
+  language: savedLanguage,
 };
 
 export const userSlice = createSlice({
@@ -39,10 +44,14 @@ export const userSlice = createSlice({
     },
     claimExp: (state) => {
       state.levelProcess += 5;
-    }
+    },
+    changeLanguage: (state, action: PayloadAction<string>) => {
+      state.language = action.payload;
+      localStorage.setItem('language', action.payload); // Save language to localStorage
+    },
   },
 });
 
-export const { increment, decrement, incrementByAmount, useEnergy, setPosition, claimExp } = userSlice.actions;
+export const { increment, decrement, incrementByAmount, useEnergy, setPosition, claimExp, changeLanguage } = userSlice.actions;
 
 export default userSlice.reducer;

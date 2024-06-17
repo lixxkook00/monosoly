@@ -3,15 +3,17 @@ import { useState } from 'react';
 import { Background, MoveTransition } from '../../components';
 import { formatAmount } from '../../utils';
 import { MissedCards, MyCards, NewCards, ProfileBar } from './components';
+import { useTranslation } from 'react-i18next';
 
 const Mine = () => {
+  const { t } = useTranslation();
+
   const heading = 1200000;
-  const username = 'Đặng Thuận';
 
   const buttonSettings = [
-    { label: 'Thẻ của tôi' },
-    { label: 'Thẻ mới' },
-    { label: 'Thẻ bị bỏ lỡ' }
+    { label: t('myCard') },
+    { label: t('newCard') },
+    { label: t('missedCard') }
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);

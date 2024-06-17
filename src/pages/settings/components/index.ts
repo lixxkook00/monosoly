@@ -1,0 +1,1 @@
+export { default as LanguagePopup } from './language-popup'

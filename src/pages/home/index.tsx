@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Background, MoveTransition } from "../../components";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Home:React.FC = () => {
+  const { t} = useTranslation();
 
   const [loadingProcess, setLoadingProcess] = useState(0);
   const navigate = useNavigate();
@@ -33,7 +35,7 @@ const Home:React.FC = () => {
       <div className="w-full">
         <MoveTransition y="5vh">
           <div className="text-center text-3xl my-3">
-            Đang tải
+            {t('loading')}
           </div>
 
           <div className="px-4 bg-slate-800/60 py-4 rounded-xl">
@@ -47,14 +49,14 @@ const Home:React.FC = () => {
           </div>
 
           <div className="text-xl text-center text-[#B8B8B8]">
-            Will be launched
+            {t('willBeLaunched')}
           </div>
 
           <div className="text-sm text-center mt-14">
-            Stay tuned
+          {t('stayTuned')}
           </div>
           <div className="text-base text-center font-semibold">
-            More infor in official channel
+          {t('moreInfoInOfficialChannel')}
           </div>
           <div className="flex justify-center">
             <img className="mr-2 mt-2" src="/images/ic-tele-black.png" alt="" />
