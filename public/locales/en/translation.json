@@ -39,5 +39,11 @@
   "moreInfoInOfficialChannel": "More info in official channel",
   "en": "English",
   "vi": "Vietnamese",
-  "zh": "Chinese"
+  "zh": "Chinese",
+  "hi": "Hindi",
+  "es": "Spanish",
+  "fr": "French",
+  "bn": "Bengali",
+  "ar": "Standard Arabic",
+  "ru": "Russian"
 }
