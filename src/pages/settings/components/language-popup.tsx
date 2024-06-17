@@ -6,7 +6,6 @@ import { changeLanguage } from '../../../contexts/user-slice';
 
 interface Language {
   code: string;
-  name: string;
   imgSrc: string;
 }
 
@@ -22,8 +21,8 @@ const LanguagePopup: React.FC = () => {
   };
 
   const languages: Language[] = [
-    { code: 'en', name: 'English', imgSrc: '/images/ic-en.png' },
-    { code: 'vi', name: 'Vietnamese', imgSrc: '/images/ic-vn.png' },
+    { code: 'en', imgSrc: '/images/ic-en.png' },
+    { code: 'vi', imgSrc: '/images/ic-vn.png' },
   ];
 
   return (
@@ -35,9 +34,9 @@ const LanguagePopup: React.FC = () => {
           onClick={() => handleChangeLanguage(lang.code)}
         >
           <div className="text-lg font-semibold mt-4 pb-3">
-            {t(lang.name)}
+            {t(lang.code)}
           </div>
-          <img className="w-9 object-contain" src={lang.imgSrc} alt={t(lang.name)} />
+          <img className="w-9 object-contain" src={lang.imgSrc} alt={t(lang.code)} />
         </div>
       ))}
     </div>
