@@ -22,7 +22,8 @@ const LanguagePopup: React.FC = () => {
 
   const languages: Language[] = [
     { code: 'en', imgSrc: '/images/ic-en.png' },
-    { code: 'vi', imgSrc: '/images/ic-vn.png' },
+    { code: 'vi', imgSrc: '/images/ic-vi.png' },
+    { code: 'zh', imgSrc: '/images/ic-zh.png' },
   ];
 
   return (
